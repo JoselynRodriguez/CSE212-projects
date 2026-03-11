@@ -44,11 +44,15 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
         //
-        //
-
-
-
-
-
+        //Step 1: Identify which elements move. The last 'amount' should go the the first place.
+        //Step 2: we used GetRange to split the list into two parts. The last part from (data.Count - amount) to the end, and the first part from index 0 up to (data.Count - amount).
+        //Step 3: Clear the original list
+        //Step 4: We add the last part first and then the first part.
+    
+        List<int> lastPart = data.GetRange(data.Count - amount, amount); //STEP 2
+        List<int> firstPart = data.GetRange(0, data.Count - amount); //STEP 2
+        data.Clear(); //STEP 3
+        data.AddRange(lastPart); //STEP 4
+        data.AddRange(firstPart); //STEP 4
     }
 }
