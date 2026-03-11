@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 public static class Arrays
 {
     /// <summary>
@@ -13,7 +15,19 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        //Step 1: The size of the array should be equal to 'length'.
+        //Step 2: The first element should be 'number' itself (which is number * 1). The second element should be number * 2, and so on until number * length.
+        //Step 3: For each index i (starting from 0), we shoul calculate number * (i+1) .
+        //Step 4: Return the array.
+        
+        double[] multiples = new double[length]; //STEP 1 
+
+        for (int i = 0; i < length; i++) //STEP 2
+        {
+            multiples[i] = number * (i + 1); //STEP 3 
+        }
+
+        return multiples; // replace this return statement with your own - STEP 4 
     }
 
     /// <summary>
@@ -29,5 +43,12 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+        //
+        //
+
+
+
+
+
     }
 }
