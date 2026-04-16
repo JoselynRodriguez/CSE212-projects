@@ -13,6 +13,11 @@ public class Node
     {
         // TODO Start Problem 1
 
+        if (value == Data)
+        {
+            return;
+        }
+
         if (value < Data)
         {
             // Insert to the left
@@ -34,7 +39,19 @@ public class Node
     public bool Contains(int value)
     {
         // TODO Start Problem 2
-        return false;
+        if (value == Data)
+            return true;
+
+        if (value < Data)
+        {
+            // Search left subtree
+            return Left != null && Left.Contains(value);
+        }
+        else
+        {
+            // Search right subtree
+            return Right != null && Right.Contains(value);
+        }
     }
 
     public int GetHeight()
